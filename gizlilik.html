@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerenimo — Gizlilik Politikası</title>
+<style>
+  :root { --yesil:#2E7D5B; --koyu:#1F5B41; --zemin:#FAF8F2; --yazi:#1C2A23; --soluk:#5B6B62; --kart:#FFFFFF; --cizgi:#E3E8E1; }
+  @media (prefers-color-scheme: dark) { :root { --zemin:#121A16; --yazi:#EAF1EC; --soluk:#9DB0A5; --kart:#1B2620; --cizgi:#2A3A31; --yesil:#5BB98A; --koyu:#7FD1A6; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--zemin); color:var(--yazi); font:17px/1.7 -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 22px 72px; }
+  h1 { font-size: 2rem; margin: 0 0 6px; color: var(--koyu); letter-spacing: -0.02em; }
+  .alt { color: var(--soluk); margin: 0 0 28px; }
+  h2 { font-size: 1.15rem; margin: 34px 0 8px; color: var(--koyu); }
+  table { width:100%; border-collapse: collapse; background: var(--kart); border:1px solid var(--cizgi); border-radius: 12px; overflow:hidden; font-size: .95rem; }
+  th, td { text-align:left; padding: 10px 12px; border-bottom: 1px solid var(--cizgi); vertical-align: top; }
+  th { color: var(--koyu); }
+  tr:last-child td { border-bottom: 0; }
+  a { color: var(--yesil); }
+  footer { margin-top: 44px; color: var(--soluk); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Gizlilik Politikası</h1>
+  <p class="alt">Cerenimo · Son güncelleme: 18 Kasım 2026</p>
+
+  <p>Cerenimo, iki kişilik bir çift için yapılmış özel bir iPhone uygulamasıdır. App Store'da yer alır ama herkese açık kayıt yoktur; yalnızca davet kodu alan iki kişi kullanabilir: ana kullanıcı ve partneri. Verilerini reklam için kullanmayız, satmayız ve seni uygulamalar ya da siteler arasında izlemeyiz.</p>
+
+  <h2>Hangi verileri işliyoruz?</h2>
+  <table>
+    <tr><th>Veri</th><th>Ne için</th></tr>
+    <tr><td>E-posta adresi ve şifre</td><td>Giriş ve hesap güvenliği. Şifre yalnızca doğrulama için kullanılır, düz metin olarak saklanmaz.</td></tr>
+    <tr><td>Sağlık kayıtları: ilaç, regl takibi ve notları, antrenman, kilo, su, beslenme (öğün ve kalori) kayıtları</td><td>Sağlık sekmesinin çalışması. Bu kayıtları yalnızca ana kullanıcı yazar; partner yalnızca ana kullanıcı paylaşımı açtığında okuyabilir.</td></tr>
+    <tr><td>Fotoğraflar, fotoğraf notları ve Şık Gün kayıtları (davetiyenin görülüp eklendiği bilgisi dahil)</td><td>Bugünün Fotoğrafı ve Şık Gün. Fotoğraflar özel (herkese kapalı) bir depoda tutulur ve süreli bağlantılarla gösterilir.</td></tr>
+    <tr><td>Notlar, zamanlı kapsüller, ruh hâli ve kısa mesajlar</td><td>Çiftin birbirine yazdığı notların ve hazır mesajların iletilmesi.</td></tr>
+    <tr><td>TUS çalışma verileri: konu ilerlemesi, çalışma süreleri, deneme sonuçları</td><td>TUS sekmesinin çalışması.</td></tr>
+    <tr><td>Yüklediğin ders slaytı PDF'leri ve onlardan üretilen özet metinleri</td><td>TUS › Özetler. PDF özel bir depoda tutulur; özet, aşağıdaki işleyicilerde otomatik olarak üretilir ve yalnızca çiftin hesabında görünür. PDF'i ya da özeti istediğin zaman silebilirsin.</td></tr>
+    <tr><td>Bildirim jetonu (cihaz tanımlayıcısı)</td><td>Zamanı gelen notlar ve ilgili uyarılar için bildirim göndermek.</td></tr>
+  </table>
+
+  <h2>Adım sayısı (Apple Sağlık)</h2>
+  <p>İzin verirsen günlük adım sayın Apple Sağlık'tan okunur ve yalnızca telefonunda gösterilir. Adım verisi sunucumuza gönderilmez, iCloud'a yazılmaz ve uygulama Apple Sağlık'a hiçbir veri yazmaz.</p>
+
+  <h2>Verileri kimler işler?</h2>
+  <p>Verilerin hizmeti sağlamak için şu hizmet sağlayıcılarda işlenir:</p>
+  <table>
+    <tr><th>İşleyici</th><th>Rol</th></tr>
+    <tr><td>Supabase</td><td>Veritabanı, kimlik doğrulama ve dosya depolama. Sunucu bölgesi: Frankfurt, Almanya (AB).</td></tr>
+    <tr><td>Google Firebase Cloud Messaging</td><td>Bildirimlerin iletilmesi (bildirimde sağlık ayrıntısı ya da not metni bulunmaz).</td></tr>
+    <tr><td>Apple</td><td>Bildirim altyapısı (APNs) ve uygulama dağıtımı.</td></tr>
+    <tr><td>GitHub (Actions)</td><td>Yalnızca TUS › Özetler: yüklenen PDF, özet üretmek için geçici bir çalışma ortamına indirilir; iş bitince ortam silinir.</td></tr>
+    <tr><td>Anthropic (Claude)</td><td>Yalnızca TUS › Özetler: PDF içeriğinden özet metni üretir. Reklam ya da izleme amacıyla kullanılmaz.</td></tr>
+  </table>
+
+  <h2>Ne kadar süre saklıyoruz?</h2>
+  <p>Verilerin, sen hesabını silene kadar saklanır. Hesap silindiğinde ilgili veriler sunucudan kalıcı olarak kaldırılır.</p>
+
+  <h2>Hesabını ve verilerini silmek</h2>
+  <p>Uygulamada Ayarlar › “Hesabı ve verilerimi sil” (sayfanın en altı) yoluyla, şifreni yeniden girerek hesabını silebilirsin. Ana kullanıcı hesabını silerse çiftin tüm verisi (notlar, fotoğraflar, Şık Günler, sağlık, beslenme ve TUS kayıtları, özetler) ve partnerin hesabı da silinir. Partner hesabını silerse yalnızca kendi hesabı kapanır; yüklediği fotoğraflar ve Şık Günler ana kullanıcıya devredilir, yazdığı notlar silinir. Uygulamaya erişemiyorsan <a href="mailto:btkaraahmet@gmail.com">btkaraahmet@gmail.com</a> adresine yazarak silme isteyebilirsin.</p>
+
+  <h2>Haklarını kullanmak</h2>
+  <p>Verilerine erişmek, düzeltmek ya da silinmesini istemek için aşağıdaki adrese yazabilirsin.</p>
+
+  <h2>Çocuklar</h2>
+  <p>Cerenimo çocuklara yönelik değildir.</p>
+
+  <h2>İletişim</h2>
+  <p><a href="mailto:btkaraahmet@gmail.com">btkaraahmet@gmail.com</a></p>
+
+  <footer><a href="index.html">← Destek sayfası</a></footer>
+</main>
+</body>
+</html>
